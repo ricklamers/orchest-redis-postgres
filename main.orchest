@@ -1,0 +1,52 @@
+{
+    "name": "Redis + Postgres test",
+    "parameters": {},
+    "services": {
+        "postgres": {
+            "env_variables": {
+                "POSTGRES_HOST_AUTH_METHOD": "trust"
+            },
+            "image": "postgres",
+            "name": "postgres",
+            "scope": [
+                "interactive",
+                "noninteractive"
+            ]
+        },
+        "redis": {
+            "image": "redis",
+            "name": "redis",
+            "scope": [
+                "interactive",
+                "noninteractive"
+            ]
+        }
+    },
+    "settings": {
+        "auto_eviction": false,
+        "data_passing_memory_size": "1GB"
+    },
+    "steps": {
+        "1ecfcd5b-3e2a-4200-bcfa-ee6b5c2dd8c9": {
+            "environment": "b0e6ca1a-7883-4784-8bbf-0299cf2f8234",
+            "file_path": "connecting.ipynb",
+            "incoming_connections": [],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    135.5,
+                    202.5
+                ]
+            },
+            "parameters": {},
+            "title": "Test redis+postgres",
+            "uuid": "1ecfcd5b-3e2a-4200-bcfa-ee6b5c2dd8c9"
+        }
+    },
+    "uuid": "ade27e7e-28ce-45a2-be73-1295b1b7ae13",
+    "version": "1.0.0"
+}
